@@ -1,14 +1,13 @@
-const number = document.querySelector(".number");
-
+const hex = document.querySelector(".hex");
 const btn = document.querySelector(".generate");
 
-const generateNumber = () => {
-  // Generate number btn 1 and 10
-  const randomNumber = Math.floor(Math.random() * 10 + 1);
-  number.innerHTML = randomNumber;
+const generateColor = () => {
+  const randomColor = Math.random().toString(16).substring(2, 8);
+  document.body.style.backgroundColor = "#" + randomColor;
+  hex.innerHTML = "#" + randomColor;
 };
 
-btn.addEventListener("click", generateNumber);
+btn.addEventListener("click", generateColor);
 
-// Generate number on page load
-// generateNumber();
+// Generate random color on page load
+// generateColor();
